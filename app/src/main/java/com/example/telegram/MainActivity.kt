@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import com.example.telegram.databinding.ActivityMainBinding
+import com.example.telegram.ui.ChatsFragment
+import com.example.telegram.ui.SettingsFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -37,6 +39,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunc() {
         setSupportActionBar(mToolbar)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.dataContainer,ChatsFragment()).commit()
         createHeader()
         createDrawer()
     }
@@ -111,6 +115,15 @@ class MainActivity : AppCompatActivity() {
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
+                    when(position){
+                        7->{
+                            supportFragmentManager.beginTransaction()
+                                .addToBackStack(null)
+                                .replace(R.id.dataContainer,SettingsFragment())
+                                .commit()
+                        }
+                    }
+
                     Toast.makeText(applicationContext,position.toString(),Toast.LENGTH_LONG).show()
                     return false
                 }
