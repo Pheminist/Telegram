@@ -105,7 +105,7 @@ class AppDrawer(val mainActivity: AppCompatActivity,val toolbar: Toolbar) {
                         }
                     }
 
-                    Toast.makeText(applicationContext,position.toString(), Toast.LENGTH_LONG).show()
+//                    Toast.makeText(applicationContext,position.toString(), Toast.LENGTH_LONG).show()
                     return false
                 }
             })
