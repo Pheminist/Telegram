@@ -1,4 +1,4 @@
-package com.example.telegram.ui
+package com.example.telegram.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,22 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.telegram.R
-import com.example.telegram.databinding.FragmentSettingsBinding
 
-/**
- * A simple [Fragment] subclass.
- */
-class SettingsFragment : Fragment() {
+open class BaseFragment(val layout: Int) : Fragment() {
 
-    private lateinit var mBinding: FragmentSettingsBinding
+    private lateinit var mRootView: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        mBinding=FragmentSettingsBinding.inflate(layoutInflater)
-        return mBinding.root
+        mRootView= inflater.inflate(layout, container, false)
+        return mRootView
     }
 
 }
