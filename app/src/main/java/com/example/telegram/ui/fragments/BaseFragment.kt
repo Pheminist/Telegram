@@ -8,7 +8,7 @@ import android.view.ViewGroup
 
 import com.example.telegram.R
 
-open class BaseFragment(val layout: Int) : Fragment() {
+open class BaseFragment(private val layout: Int) : Fragment() {
 
     private lateinit var mRootView: View
 
