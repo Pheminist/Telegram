@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.telegram.R
 import com.example.telegram.ui.fragments.SettingsFragment
+import com.example.telegram.utilits.replaceFragment
 import com.mikepenz.iconics.Iconics.applicationContext
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
@@ -98,10 +99,7 @@ class AppDrawer(val mainActivity: AppCompatActivity,val toolbar: Toolbar) {
                 ): Boolean {
                     when(position){
                         7->{
-                            mainActivity.supportFragmentManager.beginTransaction()
-                                .addToBackStack(null)
-                                .replace(R.id.dataContainer, SettingsFragment())
-                                .commit()
+                            mainActivity.replaceFragment(SettingsFragment())
                         }
                     }
 
