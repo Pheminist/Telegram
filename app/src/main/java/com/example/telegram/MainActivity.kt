@@ -8,6 +8,7 @@ import com.example.telegram.databinding.ActivityMainBinding
 import com.example.telegram.ui.fragments.ChatsFragment
 import com.example.telegram.ui.objects.AppDrawer
 import com.example.telegram.utilits.AUTH
+import com.example.telegram.utilits.initFirebase
 import com.example.telegram.utilits.replaceActivity
 import com.example.telegram.utilits.replaceFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -43,6 +44,6 @@ class MainActivity : AppCompatActivity() {
     private fun initFields(){
         mToolbar=mBinding.mainToolbar
         mAppDrawer=AppDrawer(this,mToolbar)
-        AUTH= FirebaseAuth.getInstance()
+        initFirebase()
     }
 }

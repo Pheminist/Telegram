@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="sdl;fkjas;dlkfj"
-        android:hint="phone"
+        android:hint="------------"
         android:inputType="phone"
         style="@style/editText" />
 
