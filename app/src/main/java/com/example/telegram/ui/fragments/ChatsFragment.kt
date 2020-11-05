@@ -12,7 +12,7 @@ import com.example.telegram.databinding.FragmentChatsBinding
 /**
  * A simple [Fragment] subclass.
  */
-class ChatsFragment : BaseFragment(R.layout.fragment_chats) {
+class ChatsFragment : Fragment(R.layout.fragment_chats) {
 
 
 }
